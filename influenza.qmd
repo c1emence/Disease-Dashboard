@@ -1,0 +1,73 @@
+---
+title: "Influenza"
+format: dashboard
+editor: visual
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+source("R/setup.R")
+```
+
+# Summary
+
+## Row
+
+### Influenza Cases by Census Tract
+
+```{r}
+#| title: "Influenza Cases by Census Tract"
+
+leaflet(flu_map) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(cases),
+    fillOpacity = 0.7,
+    color = "white",
+    weight = 1,
+    popup = ~paste0(
+      "Tract: ", GEOID,
+      "<br>Cases: ", cases
+    )
+  ) %>%
+  addLegend(
+    pal = pal,
+    values = ~cases,
+    title = "Influenza Cases"
+  )
+```
+
+### Column
+
+#### Total Influenza Cases
+
+```{r}
+#| label: total flu case count
+#| echo: false
+#| content: valuebox
+
+value_box(
+  value = total_flu_cases,
+  title = "Total Influenza Cases"
+)
+```
+
+#### Influenza Cases by Census Tract
+
+```{r}
+#| label: flu case count by tract
+#| echo: false
+
+flu_table_display <- DT::datatable(
+  flu_table,
+  options = list(
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    paging = FALSE
+  )
+)
+
+flu_table_display
+```

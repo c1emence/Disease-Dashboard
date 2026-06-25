@@ -1,0 +1,13 @@
+---
+format: dashboard
+editor: visual
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+source("R/setup.R")
+```
+
+homepage :P

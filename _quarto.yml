@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "BCHD Reported Disease Dashboard"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Reported Diseases"
+        menu:
+          - text: "COVID-19"
+            href: covid.qmd
+          - text: "Influenza"
+            href: influenza.qmd
+
+format:
+  dashboard:
+    scrolling: true
+
