@@ -86,6 +86,27 @@ covid_table <- covid_table %>%
     "COVID Cases" = cases
   )
 
+# Pertussis
+pert_counts <- fake_cases %>%
+  filter(disease == "Pertussis") %>%
+  count(GEOID, name = "cases")
+
+pert_map <- brazos_tracts %>%
+  left_join(pert_counts, by = "GEOID") %>%
+  mutate(cases = replace_na(cases, 0))
+
+pert_table <- pert_map %>%
+  st_drop_geometry() %>%
+  select(GEOID, cases) %>%
+  arrange(desc(cases))
+
+total_pert_cases <- sum(pert_table$cases)
+
+pert_table <- pert_table %>%
+  rename(
+    "Census Tract" = GEOID,
+    "Pertussis Cases" = cases
+  )
 # FUNCTIONS ####
 
 # color palette

@@ -1,0 +1,73 @@
+---
+title: "Pertussis"
+format: dashboard
+editor: visual
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+source("R/setup.R")
+```
+
+# Summary
+
+## Row
+
+### Pertussis Cases by Census Tract
+
+```{r}
+#| title: "Pertussis Cases by Census Tract"
+
+leaflet(pert_map) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(cases),
+    fillOpacity = 0.7,
+    color = "white",
+    weight = 1,
+    popup = ~paste0(
+      "Tract: ", GEOID,
+      "<br>Cases: ", cases
+    )
+  ) %>%
+  addLegend(
+    pal = pal,
+    values = ~cases,
+    title = "Pertussis Cases"
+  )
+```
+
+### Column
+
+#### Total Pertussis Cases
+
+```{r}
+#| label: total Pertussis case count
+#| echo: false
+#| content: valuebox
+
+value_box(
+  value = total_pert_cases,
+  title = "Total Pertussis Cases"
+)
+```
+
+#### COVID Cases by Census Tract
+
+```{r}
+#| label: Pertussis case count by tract
+#| echo: false
+
+pert_table_display <- DT::datatable(
+  pert_table,
+  options = list(
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    paging = FALSE
+  )
+)
+
+pert_table_display
+```
