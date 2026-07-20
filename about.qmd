@@ -1,9 +1,15 @@
 ---
 title: "About"
+format: dashboard
+editor: visual
 ---
 
-About this site
+# About the BCHD "Reportable Diseases" Website
 
-```{r}
-1 + 1
-```
+## Data Source
+
+## Methodology
+
+## Acknowledgements // Dashboard Development
+
+This website was designed and developed by [Clemence A. Fichet](www.linkedin.com/in/clemence-fichet-8933b4274), an MPH Student concentrating on Epidemiology at the Texas A&M University School of Public Health. This tool was a deliverable part of the Applied Practicum Experience (APEx).

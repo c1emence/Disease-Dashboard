@@ -16,7 +16,8 @@ website:
             href: influenza.qmd
           - text: "Pertussis"
             href: pertussis.qmd
-
+      - text: "About"
+        href: about.qmd
 format:
   dashboard:
     scrolling: true
