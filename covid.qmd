@@ -13,6 +13,8 @@ source("R/setup.R")
 
 # Summary
 
+# Geographic Distribution
+
 ## Row
 
 ### COVID-19 Cases by Census Tract
@@ -71,3 +73,7 @@ covid_table_display <- DT::datatable(
 
 covid_table_display
 ```
+
+# Time-Trends
+
+# Demographics

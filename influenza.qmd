@@ -13,6 +13,8 @@ source("R/setup.R")
 
 # Summary
 
+# Geographic Distribution
+
 ## Row
 
 ### Influenza Cases by Census Tract
@@ -71,3 +73,7 @@ flu_table_display <- DT::datatable(
 
 flu_table_display
 ```
+
+# Time-Trends
+
+# Demographics

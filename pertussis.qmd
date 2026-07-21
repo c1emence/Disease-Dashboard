@@ -13,6 +13,8 @@ source("R/setup.R")
 
 # Summary
 
+# Geographic Distribution
+
 ## Row
 
 ### Pertussis Cases by Census Tract
@@ -71,3 +73,7 @@ pert_table_display <- DT::datatable(
 
 pert_table_display
 ```
+
+# Time-Trends
+
+# Demographics
