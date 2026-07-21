@@ -26,5 +26,26 @@
     "title": "About the BCHD Notifiable Diseases Dashboard",
     "section": "Technical Setup",
     "text": "Technical Setup\nThis dashboard was built using R, Quarto, and the following packages: tidyverse, tigris, sf, lubridate, leaflet, plotly, bslib, DT."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to the Brazos County Notifiable Diseases Dashboard. This website serves as a central hub for summaries of notifiable conditions in Brazos County. Use the navigation bar to explore disease-specific geographic distributions and time-trends."
+  },
+  {
+    "objectID": "index.html#quick-links",
+    "href": "index.html#quick-links",
+    "title": "Welcome",
+    "section": "Quick Links",
+    "text": "Quick Links\nNavigate to the Brazos County Health District Website   here  ."
+  },
+  {
+    "objectID": "about.html#methodology",
+    "href": "about.html#methodology",
+    "title": "About the BCHD Notifiable Diseases Dashboard",
+    "section": "Methodology",
+    "text": "Methodology\n\nTechnical Setup\nThis dashboard was built using R, Quarto, and the following packages: tidyverse, tigris, sf, lubridate, leaflet, plotly, bslib, DT.\n\n\nConfidentiality\nGeographic summaries are displayed at the ZIP Code Tabulation Area (ZCTA) level to balance spatial detail with patient confidentiality and facilitate routine dashboard maintenance."
   }
 ]
