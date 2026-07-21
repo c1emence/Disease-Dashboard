@@ -3,12 +3,12 @@ project:
   output-dir: docs
 
 website:
-  title: "BCHD Reported Disease Dashboard"
+  title: "BCHD Notifiable Disease Dashboard"
   navbar:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Reported Diseases"
+      - text: "Notifiable Diseases"
         menu:
           - text: "COVID-19"
             href: covid.qmd

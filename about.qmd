@@ -1,15 +1,21 @@
 ---
-title: "About"
-format: dashboard
-editor: visual
+title: "About the BCHD Notifiable Diseases Dashboard"
+format: html
 ---
-
-# About the BCHD "Reportable Diseases" Website
-
 ## Data Source
+### Reporting Conditions
+Providers and other healthcare staff and facilities are required by Texas law to report a patient suspected of having a <strong> <a href="https://www.dshs.texas.gov/notifiable-conditions" target="_blank" rel="noopener noreferrer"> notifiable condition </a> </strong>. In Brazos County, such reports are made to the Brazos County Health District before reporting directly to Region 7 or the State Authority. The data in this dashboard is sourced from these reports made by local providers or facilities. 
 
-## Methodology
+Because reporting timelines vary by condition, some notifiable diseases may legally be reported up to seven days after diagnosis or identification. Consequently, case counts for the most recent reporting period may be incomplete and should not be interpreted as reflecting real-time disease activity.
 
-## Acknowledgements // Dashboard Development
+### Reporting Periods
+This dashboard is maintained once a week on Fridays, when new reported data is entered. 
 
-This website was designed and developed by [Clemence A. Fichet](www.linkedin.com/in/clemence-fichet-8933b4274), an MPH Student concentrating on Epidemiology at the Texas A&M University School of Public Health. This tool was a deliverable part of the Applied Practicum Experience (APEx).
+## Technical Setup
+This dashboard was built using R, Quarto, and the following packages: tidyverse, tigris, sf, lubridate, leaflet, plotly, bslib, DT.
+
+## Dashboard Development
+
+This dashboard was designed and developed by <strong> <a href="https://linkedin.com/in/clemence-fichet-8933b4274" target="_blank" rel="noopener noreferrer"> Clemence A. Fichet </a> </strong>, an MPH student in Epidemiology at the Texas A&M University School of Public Health, during a practicum with the Brazos County Health District. This dashboard was included as a deliverable in the Applied Practice Experience (APEx) program at the School of Public Health.
+
+Questions about development can be fielded to clemence.fichet@tamu.edu.
