@@ -1,0 +1,49 @@
+---
+title: "draft using master function"
+format: dashboard
+editor: visual
+---
+
+```{r}
+#| include: false
+#| label: setup
+
+source("R/setup.R")
+source("R/masterfunction.R")
+
+pertussis_report <- build_disease_report(
+  data = fake_cases_clean,
+  disease_name = "Pertussis"
+)
+```
+
+## Overview
+
+```{r}
+#| content: valuebox
+#| title: "Total Cases"
+list(
+  value = pertussis_report$total_cases,
+  icon = "clipboard2-pulse"
+)
+```
+
+## Time Trends
+
+```{r}
+pertussis_report$weekly_plot
+```
+
+## Demographics
+
+### Age
+
+```{r}
+pertussis_report$age_plot
+```
+
+### Sex
+
+```{r}
+pertussis_report$sex_plot
+```

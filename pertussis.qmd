@@ -9,6 +9,12 @@ editor: visual
 #| include: false
 
 source("R/setup.R")
+source("R/masterfunction.R")
+
+pertussis_report <- build_disease_report(
+  data = fake_cases_clean,
+  disease_name = "Pertussis"
+)
 ```
 
 # Summary
@@ -76,4 +82,22 @@ pert_table_display
 
 # Time-Trends
 
+```{r}
+pertussis_report$weekly_plot
+```
+
 # Demographics
+
+## Column
+
+### Age
+
+```{r}
+pertussis_report$age_plot
+```
+
+### Sex
+
+```{r}
+pertussis_report$sex_plot
+```

@@ -9,6 +9,12 @@ editor: visual
 #| include: false
 
 source("R/setup.R")
+source("R/masterfunction.R")
+
+covid_report <- build_disease_report(
+  data = fake_cases_clean,
+  disease_name = "COVID-19"
+)
 ```
 
 # Summary
@@ -76,4 +82,22 @@ covid_table_display
 
 # Time-Trends
 
+```{r}
+covid_report$weekly_plot
+```
+
 # Demographics
+
+## Column
+
+### Age
+
+```{r}
+covid_report$age_plot
+```
+
+### Sex
+
+```{r}
+covid_report$sex_plot
+```

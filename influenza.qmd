@@ -9,6 +9,12 @@ editor: visual
 #| include: false
 
 source("R/setup.R")
+source("R/masterfunction.R")
+
+influenza_report <- build_disease_report(
+  data = fake_cases_clean,
+  disease_name = "Influenza"
+)
 ```
 
 # Summary
@@ -76,4 +82,22 @@ flu_table_display
 
 # Time-Trends
 
+```{r}
+influenza_report$weekly_plot
+```
+
 # Demographics
+
+## Column
+
+### Age
+
+```{r}
+influenza_report$age_plot
+```
+
+### Sex
+
+```{r}
+influenza_report$sex_plot
+```
